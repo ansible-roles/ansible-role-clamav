@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  sudo: yes
+  vars:
+    clamav_fresh: false
+    clamav_clamtk_install: true
+    clamav_clamtk_url: "https://bitbucket.org/dave_theunsub/clamtk-legacy/downloads/clamtk_5.15-1.legacy_all.deb"
+  roles:
+    - "../../ansible-role-clamav"

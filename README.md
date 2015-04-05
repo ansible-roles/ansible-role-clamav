@@ -63,6 +63,12 @@ git clone https://github.com/ansible-roles/ansible-role-clamav.git igor_mukhin.c
     - igor_mukhin.clamav
 ```
 
+# Testing
+
+```bash
+cd tests && vagrant up
+```
+
 # License
 
 MIT
