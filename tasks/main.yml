@@ -1,0 +1,15 @@
+---
+
+- include: packages.yml
+
+- include: fresh.yml
+  when: clamav_fresh == true
+
+- name: ClamAv | Start daemon
+  service:
+    name: clamav-daemon
+    state: started
+  when: "'clamav-daemon' in clamav_packages"
+
+- include: clamtk.yml
+  when: clamav_clamtk_install == true

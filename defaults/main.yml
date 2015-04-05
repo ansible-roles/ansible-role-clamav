@@ -1,0 +1,20 @@
+---
+
+clamav_packages:
+  - clamav # for manual usage
+  # - clamav-daemon # for running clamav as daemon
+  # - clamav-freshclam # will installed anyway as dependency
+
+# Update virus signatures database each time role runs
+clamav_fresh: true
+
+# Install ClamTk GUI
+clamav_clamtk_install: false
+
+# Url for Ubuntu 13/14
+clamav_clamtk_url: "https://bitbucket.org/dave_theunsub/clamtk/downloads/clamtk_5.15-1_all.deb"
+
+# Url for Ubuntu 12.XX
+# clamav_clamtk_url: "https://bitbucket.org/dave_theunsub/clamtk-legacy/downloads/clamtk_5.15-1.legacy_all.deb"
+
+clamav_clamtk_tmp_deb: "/tmp/clamtk.deb"

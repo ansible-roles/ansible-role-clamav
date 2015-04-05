@@ -1,0 +1,10 @@
+---
+
+- name: ClamAv | ClamTK | Download
+  get_url:
+    url: "{{ clamav_clamtk_url }}"
+    dest: "{{ clamav_clamtk_tmp_deb }}"
+
+- name: ClamAv | ClamTK | Install
+  apt:
+    deb: "{{ clamav_clamtk_tmp_deb }}"

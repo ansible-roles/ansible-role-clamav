@@ -1,0 +1,6 @@
+---
+
+- name: ClamAv | Update database
+  shell: >
+    freshclam
+  notify: restart clamav

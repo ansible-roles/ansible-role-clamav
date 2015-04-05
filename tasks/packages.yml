@@ -1,0 +1,13 @@
+---
+
+- name: Update the apt cache
+  apt:
+    cache_valid_time: 3600
+    update_cache: yes
+
+- name: ClamAV | Install packages
+  apt:
+    pkg: "{{ item }}"
+    state: present
+  with_items: clamav_packages
+  when: clamav_packages
